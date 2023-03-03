@@ -250,6 +250,61 @@ button {
     border-radius: 7px;
 }
 
+.grid-cols-3 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+
+.grid-col-item {
+    height: 100%;
+}
+
+.icon {
+    width: 100%;
+    line-height: 40px;
+}
+
+.icon svg {
+    width: 30px;
+    height: 30px;
+    color: #6b85d8;
+}
+
+.featured_info {
+    width: 100%;
+}
+
+.featured_info span {
+    width: 100%;
+    display: block;
+    font-size: 21px;
+    line-height: 33px;
+    color: var(--lg-heading);
+}
+
+.featured_info p {
+    display: block;
+    width: 100%;
+    margin-top: 7px;
+    font-weight: 400;
+    color: #334157;
+    line-height: 25px;
+    font-size: 15.5px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    height: 12px;
+    margin-top: 8rem;
+}
+
+
 /*====MEDIA QURIES FOR RESPONSIVE DESIGN====*/
 
 @media screen and (min-width: 768px){
@@ -320,6 +375,15 @@ button {
         margin-right: 1rem;
     }
 
+    .grid-cols-3 {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    }
+
+    .featured_info p {
+        line-height: 23px;
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (max-width: 991px) {
@@ -370,5 +434,9 @@ button {
     .team_img_wrapper {
         width: 350px;
         height: 350px;
+    }
+
+    .featured_info span {
+        font-size: 19px;
     }
 }
